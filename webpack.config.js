@@ -1,6 +1,6 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+import path from 'path';
+import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export default() => ({
     entry: {
@@ -31,6 +31,7 @@ export default() => ({
                         cacheDirectory: true,
                         presets: [
                             'flow',
+                            'es2015',
                             'stage-0',
                             'env',
                         ],
