@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6, p, button {
 }
 
 .header-white {
-    font-size: 70px;
+    font-size: 55px;
     font-weight: bold;
     margin-top: 10%;
     @extend .shadow-blue;
@@ -61,7 +61,6 @@ h1, h2, h3, h4, h5, h6, p, button {
         width: auto;
         height: auto;
         z-index: -100;
-        background: $back-video;
         background-size: cover;
     }
 }
