@@ -1,8 +1,8 @@
-import path from 'path';
-import webpack from 'webpack';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-export default() => ({
+module.exports = {
     entry: {
         app: ['./client/app.js'],
         vendor: [
@@ -31,7 +31,7 @@ export default() => ({
                         cacheDirectory: true,
                         presets: [
                             'flow',
-                            'es2015',
+                            'es2017',
                             'stage-0',
                             'env',
                         ],
@@ -110,4 +110,4 @@ export default() => ({
         modules: ['node_modules', path.join(__dirname, 'client')],
         extensions: ['.js', '.jsx'],
   },
-});
+};

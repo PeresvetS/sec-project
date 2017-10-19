@@ -23,7 +23,7 @@ build:
 	npm run build
 
 test: init
-	NODE_ENV=test npm test
+	NODE_ENV=test npm test 
 
 check-types:
 	npm run flow
