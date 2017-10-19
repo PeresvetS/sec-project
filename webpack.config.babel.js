@@ -31,6 +31,7 @@ export default() => ({
                         cacheDirectory: true,
                         presets: [
                             'flow',
+                            'es2015',
                             'stage-0',
                             'env',
                         ],
