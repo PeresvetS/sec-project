@@ -4,7 +4,7 @@ import gulp from 'gulp';
 import gutil from 'gulp-util';
 import repl from 'repl';
 import container from './src/container';
-import init from './src/init';
+// import init from './src/init';
 import getServer from './src';
 
 gulp.task('console', () => {
@@ -18,10 +18,10 @@ gulp.task('console', () => {
         });
 });
 
-gulp.task('init', async () => {
-    await init();
-    console.log('db was created');
-});
+// gulp.task('init', async () => {
+//     await init();
+//     console.log('db was created');
+// });
 
 gulp.task('server', (cb) => {
     getServer().listen(process.env.PORT || 4000, cb);
