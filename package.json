@@ -2,6 +2,9 @@
   "name": "sec-project",
   "version": "0.0.1",
   "description": "site for pentest sevice",
+  "engines": {
+    "node": "8.7.0"
+  },
   "main": "index.js",
   "scripts": {
     "gulp": "gulp",
