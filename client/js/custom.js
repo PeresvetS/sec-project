@@ -3,8 +3,7 @@ import Chartist from 'chartist';
 import SmoothScroll from 'smoothscroll-for-websites';
 
 
-$(document).ready(function () {
-
+$(document).ready(function() {
     // animation
 
     $('.post')

@@ -10,13 +10,22 @@
     <script src='/assets/vendor.js' async></script>
     <script src='/assets/app.js' async></script>
     <script src='https://use.fontawesome.com/5cb9b1fb91.js' async></script>
+    <script>
+
+      function playVideo() {
+        var v = document.getElementById("video")
+        v.play();
+      }
+
+      document.addEventListener("DOMContentLoaded", playVideo);
+    </script>
   </head>
 
   <body>
     <div class="container-fluid" id="content">
       <div class="text-center post">
           <div class="is-overlay">
-            <video autoplay="autoplay" loop="loop">
+            <video id="video" preload="auto" muted loop>
               <source src="/video/1.mp4" type="video/mp4">
               <source src="/video/1.webm" type="video/webm">
               <source src="/video/1.ogv" type="video/ogg">
