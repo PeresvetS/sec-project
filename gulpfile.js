@@ -1,11 +1,11 @@
-import 'babel-polyfill';
+require('babel-polyfill');
 
-import gulp from 'gulp';
-import gutil from 'gulp-util';
-import repl from 'repl';
-import container from './src/container';
-import init from './src/init';
-import getServer from './src';
+const gulp = ('gulp');
+const gutil = ('gulp-util');
+const repl = ('repl');
+const container = ('./src/container');
+const init = ('./src/init');
+const getServer = ('./src');
 
 gulp.task('console', () => {
     gutil.log = gutil.noop;
