@@ -39,7 +39,11 @@ h1, h2, h3, h4, h5, h6, p, button {
     font-weight: bold;
     margin-top: 10%;
     @extend .shadow-blue;
+    @media (max-weight: 576) {
+        font-size: 50px;
+    }
 }
+
 
 .hiddens {
     opacity: 0;
@@ -92,6 +96,10 @@ h1, h2, h3, h4, h5, h6, p, button {
     &:hover{
         border-width: medium;
     }
+}
+
+.tab-pad {
+    padding: 5px;
 }
 
 .text-big {

@@ -18,6 +18,11 @@
           <div class="is-overlay">
             <video autoplay="autoplay" loop="loop">
               <source src="/video/1.mp4" type="video/mp4">
+              <source src="/video/1.webm" type="video/webm">
+              <source src="/video/1.ogv" type="video/ogg">
+              <object data="/video/1.swf" type="application/x-shockwave-flash">
+                <param name="movie" value="video.swf">
+              </object>
             </video>
           </div>
           <ul class="nav justify-content-end text-big">
@@ -127,8 +132,8 @@
           </div>
           <div class="p-4"></div>
           <div class="row post border border-white p-3">
-            <div class="col-4">
-              <div class="list-group" id="list-tab" role="tablist">
+            <div class="col-md-4 col-xs-12">
+              <div class="list-group tab-pad" id="list-tab" role="tablist">
                 <a class="list-group-item list-group-item-action list-group-item-secondary active" id="list-home-list" data-toggle="list" href="#list-home" role="tab"
                   aria-controls="home">Самописный сайт</a>
                 <a class="list-group-item list-group-item-action list-group-item-secondary" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab"
@@ -139,8 +144,8 @@
                   aria-controls="settings">Одностраничник</a>
               </div>
             </div>
-            <div class="col-8">
-              <div class="tab-content text-light" id="nav-tabContent">
+            <div class="col-md-8 col-xs-12">
+              <div class="tab-content text-light tab-pad" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Всё зависит от программиста,
                   который писал для Вас сайт (или от Вас, если писали Вы сами). Но программист - тоже человек, и, как правило, в таких
                   сайтах по невнимательности или незнанию программиста остаются страшные дыры, с помощью которых можно легко взломать сайт.
@@ -215,7 +220,7 @@
                     <small class="text-muted">Подойдёт для простых сайтов</small>
                   </div>
             </div>
-            <div class="card border border-danger center-card">
+            <div class="card border border-danger center-card mb-3">
                 <img class="card-img-top" src="/img/29.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">Пакет оптимальный</h4>
