@@ -5,8 +5,6 @@ import 'babel-polyfill';
 import path from 'path';
 import Koa from 'koa';
 import hbs from 'koa-hbs';
-import { get } from 'lodash';
-import rollbar from 'rollbar';
 import serve from 'koa-static';
 import helmet from 'koa-helmet';
 import Router from 'koa-router';
@@ -23,7 +21,6 @@ import addRoutes from './controllers';
 
 
 export default() => {
-  rollbar.init(process.env.ROLLBAR_KEY);
 
   const app = new Koa();
   app.use(helmet());
@@ -38,8 +35,8 @@ export default() => {
     try {
       await next();
     } catch (err) {
-      // err.status = err.statusCode || err.status || 500;
-      // ctx.redirect('/500');
+      err.status = err.statusCode || err.status || 500;
+      ctx.redirect('/500');
     }
   });
   app.use(bodyParser());
@@ -78,11 +75,11 @@ export default() => {
     }
   });
 
-  const optionsRollbar = {
-    exitOnUncaughtException: true,
-  };
-  rollbar.errorHandler(process.env.ROLLBAR_KEY);
-  rollbar.handleUncaughtExceptionsAndRejections(process.env.ROLLBAR_KEY, optionsRollbar);
+  // const optionsRollbar = {
+  //   exitOnUncaughtException: true,
+  // };
+  // rollbar.errorHandler(process.env.ROLLBAR_KEY);
+  // rollbar.handleUncaughtExceptionsAndRejections(process.env.ROLLBAR_KEY, optionsRollbar);
 
   return app;
 };
