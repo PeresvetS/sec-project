@@ -1,12 +1,10 @@
 {
     "presets": [
         "flow",
-        "es2017",
         "env",
         "stage-0"
     ],
     "plugins": [
-        "transform-async-to-generator",
-        "transform-es2015-modules-commonjs"
+        "transform-async-to-generator"
     ]
 }

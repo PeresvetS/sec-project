@@ -12,7 +12,6 @@ import helmet from 'koa-helmet';
 import Router from 'koa-router';
 import convert from 'koa-convert';
 import koaLogger from 'koa-logger';
-import dateFormat from 'dateformat';
 import middleware from 'koa-webpack';
 import flash from 'koa-flash-simple';
 import bodyParser from 'koa-bodyparser';

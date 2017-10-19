@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = {
+export default() => ({
     entry: {
         app: ['./client/app.js'],
         vendor: [
@@ -31,7 +31,6 @@ module.exports = {
                         cacheDirectory: true,
                         presets: [
                             'flow',
-                            'es2017',
                             'stage-0',
                             'env',
                         ],
@@ -110,4 +109,4 @@ module.exports = {
         modules: ['node_modules', path.join(__dirname, 'client')],
         extensions: ['.js', '.jsx'],
   },
-};
+});
