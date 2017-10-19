@@ -1,0 +1,119 @@
+// .box,
+// .page {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     overflow: hidden;
+//     z-index: 999;
+//     background: rgba(15, 102, 99, 0.5);
+//     color: white;    
+// }
+
+@import "chartist/chartist.scss";
+@import "_template";
+
+
+h1, h2, h3, h4, h5, h6, p, button {
+    font-family: Georgia !important;
+}
+
+.arrow {
+    font-size: 80px !important;
+    margin-top: 7%;
+}
+
+.char-box {
+    height: 400px;
+    width: 600px;
+}
+
+.center-card {
+    border-width: 3px !important;
+}
+
+.header-white {
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: 10%;
+    @extend .shadow-blue;
+}
+
+.hiddens {
+    opacity: 0;
+}
+
+.is-overlay {
+    display: block;
+    width: 100%;
+    height: 100%;
+    video {
+        position: absolute;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        background: $back-video;
+        background-size: cover;
+    }
+}
+
+.min-logo {
+    height: 60px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.second-box {
+    height: 70px;
+}
+
+.scrollup {
+    width: 40px;
+    height: 40px;
+    opacity: 0.3;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    text-indent: -9999px;
+    background: url('/img/arrow.png') no-repeat;
+}
+
+.shadow-blue {
+    text-shadow: $blue-shadow;
+}
+
+.sell-tab {
+    &:hover{
+        border-width: medium;
+    }
+}
+
+.text-big {
+    font-size: 30px;
+}
+
+.third-box {
+    height: 100px;
+}
+
+.top-modal {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+   
+}
+
+.visibles {
+    opacity: 1;
+}
+
+
+
+

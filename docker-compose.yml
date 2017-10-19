@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  web:
+    build: .
+    command: make start
+    ports:
+     - "4000:4000"
+    volumes:
+     - .:/code
