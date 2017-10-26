@@ -11,12 +11,16 @@
 //     background: rgba(15, 102, 99, 0.5);
 //     color: white;    
 // }
-
 @import "chartist/chartist.scss";
 @import "_template";
-
-
-h1, h2, h3, h4, h5, h6, p, button {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
     font-family: Georgia !important;
 }
 
@@ -44,7 +48,6 @@ h1, h2, h3, h4, h5, h6, p, button {
     }
 }
 
-
 .hiddens {
     opacity: 0;
 }
@@ -62,6 +65,13 @@ h1, h2, h3, h4, h5, h6, p, button {
         height: auto;
         z-index: -100;
         background-size: cover;
+    }
+}
+
+.logo-top {
+    height: 100px !important;
+    @media (max-weight: 576px) {
+        display: none;
     }
 }
 
@@ -92,7 +102,7 @@ h1, h2, h3, h4, h5, h6, p, button {
 }
 
 .sell-tab {
-    &:hover{
+    &:hover {
         border-width: medium;
     }
 }
@@ -114,13 +124,8 @@ h1, h2, h3, h4, h5, h6, p, button {
     left: 0;
     right: 0;
     top: 0;
-   
 }
 
 .visibles {
     opacity: 1;
 }
-
-
-
-

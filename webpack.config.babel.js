@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-export default() => ({
+export default () => ({
     entry: {
         app: ['./client/app.js'],
         vendor: [
@@ -12,7 +12,6 @@ export default() => ({
             'bootstrap-loader',
             './client/js/checker',
             './client/js/custom',
-            './client/js/wow',
         ],
     },
     output: {
@@ -21,8 +20,7 @@ export default() => ({
         publicPath: '/assets/',
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
@@ -74,26 +72,26 @@ export default() => ({
     plugins: [
         new ExtractTextPlugin('./app.css'),
         new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-        'window.$': 'jquery',
-        Tether: 'tether',
-        'window.Tether': 'tether',
-        Popper: ['popper.js', 'default'],
-        Alert: 'exports-loader?Alert!bootstrap/js/dist/alert',
-        Button: 'exports-loader?Button!bootstrap/js/dist/button',
-        Carousel: 'exports-loader?Carousel!bootstrap/js/dist/carousel',
-        Collapse: 'exports-loader?Collapse!bootstrap/js/dist/collapse',
-        Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown',
-        Modal: 'exports-loader?Modal!bootstrap/js/dist/modal',
-        Popover: 'exports-loader?Popover!bootstrap/js/dist/popover',
-        Scrollspy: 'exports-loader?Scrollspy!bootstrap/js/dist/scrollspy',
-        Tab: 'exports-loader?Tab!bootstrap/js/dist/tab',
-        Tooltip: 'exports-loader?Tooltip!bootstrap/js/dist/tooltip',
-        Util: 'exports-loader?Util!bootstrap/js/dist/util',
-    }),
-    new webpack
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            'window.$': 'jquery',
+            Tether: 'tether',
+            'window.Tether': 'tether',
+            Popper: ['popper.js', 'default'],
+            Alert: 'exports-loader?Alert!bootstrap/js/dist/alert',
+            Button: 'exports-loader?Button!bootstrap/js/dist/button',
+            Carousel: 'exports-loader?Carousel!bootstrap/js/dist/carousel',
+            Collapse: 'exports-loader?Collapse!bootstrap/js/dist/collapse',
+            Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown',
+            Modal: 'exports-loader?Modal!bootstrap/js/dist/modal',
+            Popover: 'exports-loader?Popover!bootstrap/js/dist/popover',
+            Scrollspy: 'exports-loader?Scrollspy!bootstrap/js/dist/scrollspy',
+            Tab: 'exports-loader?Tab!bootstrap/js/dist/tab',
+            Tooltip: 'exports-loader?Tooltip!bootstrap/js/dist/tooltip',
+            Util: 'exports-loader?Util!bootstrap/js/dist/util',
+        }),
+        new webpack
         .optimize
         .CommonsChunkPlugin({
             // This name 'vendor' ties into the entry definition
@@ -109,5 +107,5 @@ export default() => ({
     resolve: {
         modules: ['node_modules', path.join(__dirname, 'client')],
         extensions: ['.js', '.jsx'],
-  },
+    },
 });

@@ -10,22 +10,13 @@
     <script src='/assets/vendor.js' async></script>
     <script src='/assets/app.js' async></script>
     <script src='https://use.fontawesome.com/5cb9b1fb91.js' async></script>
-    <script>
-
-      function playVideo() {
-        var v = document.getElementById("video")
-        v.play();
-      }
-
-      document.addEventListener("DOMContentLoaded", playVideo);
-    </script>
   </head>
 
   <body>
     <div class="container-fluid" id="content">
       <div class="text-center post">
           <div class="is-overlay">
-            <video id="video" muted loop poster="/img/black.jpg">
+            <video id="video" autoplay muted loop poster="/img/black.jpg">
               <source src="/video/1.mp4" type="video/mp4">
               <source src="/video/1.webm" type="video/webm">
               <source src="/video/1.ogv" type="video/ogg">
@@ -34,18 +25,25 @@
               </object>
             </video>
           </div>
-          <ul class="nav justify-content-end text-big">
-            <li class="nav-item">
-            </li>
-              <a href="#" class="nav-link text-light">
-                <span class="fa fa-envelope-o" aria-hidden="true">  nik.writter@ya.ru</span>
-              </a>
-            <li class="nav-item">
-              <a href="#" class="nav-link text-light">
-                <span class="fa fa-phone" aria-hidden="true">  +7 963-712-87-82</span>
-              </a>
-            </li>
-          </ul>
+          <div class="d-flex justify-content-between">
+            <ul class="nav text-big">
+              <li>
+                <img class="logo-top" src="/img/transparent.png" alt="logo">
+              </li>
+            </ul>
+            <ul class="nav text-big">
+              <li class="nav-item">
+              </li>
+                <a href="#" class="nav-link text-light">
+                  <span class="fa fa-envelope-o" aria-hidden="true">  info@se-center.com</span>
+                </a>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-light">
+                  <span class="fa fa-phone" aria-hidden="true">  +7 963-712-87-82</span>
+                </a>
+              </li>
+            </ul>
+          </div>
           <div class="p-5"></div>
           <br>
           <h1 class="header-white text-light">Аудит безопастности сайта</h1> 
@@ -53,15 +51,15 @@
           <br>
           <button type="button" class="btn btn-lg btn-outline-info" data-toggle="modal" data-target="#orderModal" data-whatever="Не определён">Оставить заявку</button>
           <div class="p-5"></div>
-          <a href="#" class="fa fa-arrow-down arrow down text-light" aria-hidden="true"></a>
+          <a class="fa fa-angle-down arrow down text-light" aria-hidden="true"></a>
           <div class="p-5"></div>
           <div class="row second-box bg-info"></div>
           <div class="row bg-light">
-            <div class="container">
+            <div class="container" id="down">
             <div class="p-4"></div>
             <h2 class="font-weight-bold post">Почему это так важно?</h2>
             <div class="p-3"></div>
-            <div class="card-block card-deck post" id="down">
+            <div class="card-block card-deck post">
               <div class="card">
                 <img src="/img/1.jpg" alt="Young hacker" class="card-img-top">
                 <div class="card-body">
@@ -103,7 +101,7 @@
             <button type="button" class="btn btn-lg btn-success post" data-toggle="modal" data-target="#orderModal" data-whatever="Не определён">Проверить мой сайт</button>
           </div>
         </div>
-        <div class="p-5 bg-light"></div>
+        <div class="p-5 bg-light row"></div>
       </div>
 
       <div class="row third-box text-center bg-info post">
@@ -119,8 +117,8 @@
             <div class="jumbotron jumbotron-fluid post text-center col-xs-12 col-md-5">
               <div class="container">
                 <h1 class="display-4">По подсчётам Google,</h1>
-                <p class="lead">количество зарегистрированных взломов(красная линия) 
-                  и пострадавших сайтов (оранжевая линия) каждый год увеличивается от 30 до 40%.
+                <p class="lead">количество зарегистрированных взломов(красная линия, тыс.) 
+                  и пострадавших сайтов (оранжевая линия, тыс.) каждый год увеличивается от 30 до 40%.
                   По предварительным данным в 2017 году произошло более <b>1'397'980 взломов</b>, 
                   злоумышленникам становится всё проще это делать.</p>
               </div>
@@ -311,8 +309,9 @@
 
         <div class="p-5"></div>
         <div class="m-auto text-center">
-          <p class="text-light">SeCenter, 2017</p>
-          <a href='http://ru.freepik.com/free-vector/векторы_1063668.htm'><p class="text-primary">Pictures designed by Freepik</p></a>
+          <a href='https://se-center.com'><img class="logo-top" src="/img/transparent2.png" alt="logo"></a>
+          <div class="p-3"></div>
+          <a href='http://ru.freepik.com/free-vector/векторы_1063668.htm'><p class="text-light">Pictures designed by Freepik</p></a>
           </div>
         </div>
       </div>
