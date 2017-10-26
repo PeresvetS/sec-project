@@ -70,9 +70,7 @@ button {
 
 .logo-top {
     height: 100px !important;
-    @media (max-weight: 576px) {
-        display: none;
-    }
+    display: none;
 }
 
 .min-logo {
